@@ -1,0 +1,13 @@
+## Generate constants for your localized strings.
+##   Be sure that SwiftGen only parses ONE locale (typically Base.lproj, or en.lproj, or whichever your development region is); otherwise it will generate the same keys multiple times.
+##   SwiftGen will parse all `.strings` files found in that folder.
+strings:
+  inputs:
+    - Sources/SwiftGenExample/Base.lproj
+  outputs:
+    - templateName: structured-swift5
+      output: ${DERIVED_SOURCES_DIR}/Strings+Generated.swift
+
+##
+## For more info, use `swiftgen config doc` to open the full documentation on GitHub.
+## https://github.com/SwiftGen/SwiftGen/tree/6.4.0/Documentation/
